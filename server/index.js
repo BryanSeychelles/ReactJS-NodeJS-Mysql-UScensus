@@ -64,6 +64,27 @@ app.get("/api/mace", (req,res) => {
     })
 })
 
+app.get("/api/sex", (req,res) => {
+    const sqlSelect = "SELECT COUNT(sex), sex, AVG(age) FROM census_learn_sql GROUP BY sex"
+    db.query(sqlSelect, (err, result) => {
+        res.send(result)
+    })
+})
+
+app.get("/api/birthcountry", (req,res) => {
+    const sqlSelect = "SELECT COUNT(birthcountry), birthcountry, AVG(age) FROM census_learn_sql GROUP BY birthcountry"
+    db.query(sqlSelect, (err, result) => {
+        res.send(result)
+    })
+})
+
+app.get("/api/citizenship", (req,res) => {
+    const sqlSelect = "SELECT COUNT(citizenship), citizenship, AVG(age) FROM census_learn_sql GROUP BY citizenship"
+    db.query(sqlSelect, (err, result) => {
+        res.send(result)
+    })
+})
+
 app.listen (3001, () => {
     console.log('listen on port 3001');
 })

@@ -8,6 +8,10 @@ import {LastEducation} from '../Table/lasteducation'
 import {MaritalStatus} from '../Table/maritalstatus'
 import {MajorIndustryCode} from '../Table/majorindustrycode'
 import {Mace} from '../Table/mace'
+import {Sex} from '../Table/sex'
+import {BirthCountry} from '../Table/birthcountry'
+import {CitizenShip} from '../Table/citizenship'
+
 
 
 const tabsOne = () => {
@@ -20,6 +24,8 @@ const tabsOne = () => {
     document.getElementById('five').style.display = 'none'
     document.getElementById('six').style.display = 'none'
     document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 }
 
@@ -33,6 +39,8 @@ const tabsTwo = () => {
     document.getElementById('five').style.display = 'none'
     document.getElementById('six').style.display = 'none'
     document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 }
 
@@ -46,6 +54,8 @@ const tabsThree = () => {
     document.getElementById('five').style.display = 'none'
     document.getElementById('six').style.display = 'none'
     document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 
 }
@@ -60,6 +70,8 @@ const tabsFour= () => {
     document.getElementById('five').style.display = 'none'
     document.getElementById('six').style.display = 'none'
     document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 
 }
@@ -74,6 +86,8 @@ const tabsFive= () => {
     document.getElementById('four').style.display = 'none'
     document.getElementById('six').style.display = 'none'
     document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 
 }
@@ -88,6 +102,8 @@ const tabsSix = () => {
     document.getElementById('four').style.display = 'none'
     document.getElementById('five').style.display = 'none'
     document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 
 }
@@ -102,10 +118,55 @@ const tabsSeven = () => {
     document.getElementById('four').style.display = 'none'
     document.getElementById('five').style.display = 'none'
     document.getElementById('six').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
 
 }
 
+const tabsEight = () => {
+    var elmt = document.getElementById('eight')
 
+    elmt.style.display = 'block'
+    document.getElementById('one').style.display = 'none'
+    document.getElementById('two').style.display = 'none'
+    document.getElementById('three').style.display = 'none'
+    document.getElementById('four').style.display = 'none'
+    document.getElementById('five').style.display = 'none'
+    document.getElementById('six').style.display = 'none'
+    document.getElementById('seven').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
+
+}
+
+const tabsNine = () => {
+    var elmt = document.getElementById('nine')
+
+    elmt.style.display = 'block'
+    document.getElementById('one').style.display = 'none'
+    document.getElementById('two').style.display = 'none'
+    document.getElementById('three').style.display = 'none'
+    document.getElementById('four').style.display = 'none'
+    document.getElementById('five').style.display = 'none'
+    document.getElementById('six').style.display = 'none'
+    document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+}
+
+const tabsTen = () => {
+    var elmt = document.getElementById('ten')
+
+    elmt.style.display = 'block'
+    document.getElementById('one').style.display = 'none'
+    document.getElementById('two').style.display = 'none'
+    document.getElementById('three').style.display = 'none'
+    document.getElementById('four').style.display = 'none'
+    document.getElementById('five').style.display = 'none'
+    document.getElementById('six').style.display = 'none'
+    document.getElementById('seven').style.display = 'none'
+    document.getElementById('eight').style.display = 'none'
+    document.getElementById('nine').style.display = 'none'
+
+}
 
 export const Home = () => {
 
@@ -177,6 +238,15 @@ export const Home = () => {
                             <Nav.Link eventKey="link-7" onClick={tabsSeven}>Mace</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
+                            <Nav.Link eventKey="link-8" onClick={tabsEight}>Sex</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="link-9" onClick={tabsNine}>Birth Country</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link eventKey="link-10" onClick={tabsTen}> Citizen Ship</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
                             <Nav.Link eventKey="disabled" disabled>
                                 Disabled
                             </Nav.Link>
@@ -215,6 +285,21 @@ export const Home = () => {
                     <section className="sect" id="seven">
                         <div>
                             <Mace/>
+                        </div>
+                    </section>
+                    <section className="sect" id="eight">
+                        <div>
+                            <Sex/>
+                        </div>
+                    </section>
+                    <section className="sect" id="nine">
+                        <div>
+                            <BirthCountry/>
+                        </div>
+                    </section>
+                    <section className="sect" id="ten">
+                        <div>
+                            <CitizenShip/>
                         </div>
                     </section>
                 </div>
